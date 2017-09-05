@@ -1,0 +1,7 @@
+$table -> increments('id');
+				$table -> integer('student_id') -> unsigned();
+				$table -> foreign('student_id') -> references('id') -> on('users')
+				       -> onUpdate('cascade') -> onDelete('cascade');
+				$table -> integer('plan_id') -> unsigned();
+				$table -> foreign('plan_id') -> references('id') -> on('palns')
+				       -> onUpdate('cascade') -> onDelete('cascade');
